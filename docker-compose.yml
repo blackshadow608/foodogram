@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+
+  foodogram_db:
+    restart: "no"
+    container_name: foodogram_db
+    image: postgres:11-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=fg_test
